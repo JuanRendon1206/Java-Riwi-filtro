@@ -101,14 +101,14 @@ public class ContratacionController{
             double salario = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el nuevo salario del contrato : "));
 
             VacanteModel objVacanteModel = new VacanteModel();
-            Vacante objVacante = objVacanteModel.findById(vacanteId);
+            Vacante objVacante = objVacanteModel.findVacanteById(vacanteId);
 
             CoderModel objCoderModel = new CoderModel();
-            Coder objCoder = objCoderModel.findById(coderId);
+            Coder objCoder = objCoderModel.findCoderById(coderId);
 
 
-            objContratacion.setId(idUpdate);
-            objContratacion.setSalario(salario);
+            objContratacion.setId_contratacion(idUpdate);
+            objContratacion.setSalarioContratacion(salario);
             objContratacion.setObjVacante(objVacante);
             objContratacion.setObjCoder(objCoder);
 
@@ -131,7 +131,7 @@ public class ContratacionController{
             if (confirm == 0){
                 objContratacionModel.delete(objCOntratacion);
                 //metodo que acitva el estado de la vacante
-                objVacanteModel.changeEstadoActivo(objCOntratacion.getVacanteId());
+                objVacanteModel.changeEstadoToActivo(objCOntratacion.getVacante_id());
             }
         }
     }
