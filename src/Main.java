@@ -1,4 +1,5 @@
 import controller.CoderController;
+import controller.ContratacionController;
 import controller.VacanteController;
 
 import javax.swing.*;
@@ -124,12 +125,16 @@ public class Main {
 
                         switch (option3){
                             case "1":
+                                ContratacionController.create();
                                 break;
                             case "2":
+                                ContratacionController.getAll();
                                 break;
                             case "3":
+                                ContratacionController.update();
                                 break;
                             case "4":
+                                ContratacionController.delete();
                                 break;
                         }
 
