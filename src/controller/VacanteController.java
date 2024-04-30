@@ -56,7 +56,7 @@ public class VacanteController {
             }else{
 
                 Vacante objVacante = new Vacante();
-                objVacante.setId_vacante(empresa_id);
+                objVacante.setEmpresa_id(empresa_id);
                 objVacante.setTituloVacante(titulo);
                 objVacante.setDescripcionVacante(descripcion);
                 objVacante.setDuracionVacante(duracion);
